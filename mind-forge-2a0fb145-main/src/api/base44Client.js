@@ -1,13 +1,5 @@
-import { createClient } from '@base44/sdk';
-import { appParams } from '@/lib/app-params';
+// Mock client implementation - no longer using Base44 SDK
+import { mockClient } from './mockClient';
 
-const { appId, serverUrl, token, functionsVersion } = appParams;
-
-//Create a client with authentication required
-export const base44 = createClient({
-  appId,
-  serverUrl,
-  token,
-  functionsVersion,
-  requiresAuth: false
-});
+// Export the mock client as 'base44' to maintain compatibility
+export const base44 = mockClient;
